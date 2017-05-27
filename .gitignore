@@ -2,7 +2,7 @@
 *.synctex.gz
 *.bbl
 *.blg
-*.drf
+*.brf
 *.dvi
 *.idx
 *.lof
