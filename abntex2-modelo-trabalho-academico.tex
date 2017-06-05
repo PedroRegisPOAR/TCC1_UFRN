@@ -156,6 +156,42 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 \makeindex
 % ---
 
+\usepackage{amsthm,amsfonts}
+\usepackage{amsmath}
+
+
+%% Todos esses comandos devem sermigrados para outro arquivo em versões futuras
+\newcommand{\setN}{\mathbb{N}}
+\newcommand{\setE}{\mathbb{E}}
+\newcommand{\setS}{\mathbb{S}}
+\newcommand{\setT}{\mathbb{T}}
+
+\newcommand{\setdp}{\delta_{+}}
+\newcommand{\setdn}{\delta_{-}}
+\newcommand{\edge}{\mathrm{e}}
+\newcommand{\inode}{\mathrm{i}}
+\newcommand{\jnode}{\mathrm{j}}
+\newcommand{\dmin}{\mathrm{d_{min}}}
+\newcommand{\dmax}{\mathrm{d_{max}}}
+\newcommand{\phmin}{\mathrm{ph_{min}}}
+\newcommand{\phmax}{\mathrm{ph_{max}}}
+\newcommand{\dem}{\mathrm{dem}}
+\newcommand{\DT}{\mathfrak{D}}
+\newcommand{\z}{\mathrm{z}}
+\newcommand{\C}{\mathrm{C}}
+\newcommand{\q}{\mathrm{q}}
+\newcommand{\tT}{\mathrm{t}}
+
+\newcommand{\vQ}{\mathrm{Q}}
+\newcommand{\vQF}{\mathrm{QF}}
+\newcommand{\vQT}{\mathrm{QT}}
+\newcommand{\vH}{\mathrm{H}}
+\newcommand{\vD}{\mathrm{D}}
+
+
+
+
+
 % ----
 % Início do documento
 % ----
@@ -418,37 +454,37 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ---
 % inserir lista de ilustrações
 % ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
+%%\pdfbookmark[0]{\listfigurename}{lof}
+%%\listoffigures*
+%%\cleardoublepage
 % ---
 
 % ---
 % inserir lista de tabelas
 % ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
+%%\pdfbookmark[0]{\listtablename}{lot}
+%%\listoftables*
+%%\cleardoublepage
 % ---
 
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-\begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
-\end{siglas}
+%%\begin{siglas}
+%%  \item[ABNT] Associação Brasileira de Normas Técnicas
+%%  \item[abnTeX] ABsurdas Normas para TeX
+%%\end{siglas}
 % ---
 
 % ---
 % inserir lista de símbolos
 % ---
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
+%%\begin{simbolos}
+%%  \item[$ \Gamma $] Letra grega Gama
+%%  \item[$ \Lambda $] Lambda
+%%  \item[$ \zeta $] Letra grega minúscula zeta
+%%  \item[$ \in $] Pertence
+%%\end{simbolos}
 % ---
 
 % ---
@@ -474,28 +510,248 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ----------------------------------------------------------
 
 
-A partir do momento em que o ser humano tornou-se sedentário surgiu a necessidade de que abastecimentos, dentre eles o abastecimento de água.
+A partir do momento em que o ser humano tornou-se sedentário surgiu a necessidade de que abastecimentos às pessoas fossem feitos, dentre muitos outros, destaca-se aqui o abastecimento de água.
 
-Teste \cite{cormen2012}
+A necessidade de utilização da água para abastecimento e indissociável da história da humanidade. Essa demanda determinou a própria localização das comunidades, desde que o homem passou a viver de forma sedentária, adotando a agricultura como meio de subsistência e abandonando a vida nômade, mais centrada na caça. A vida sedentária tornou mais complexo o equacionamento das demandas de água, que passaram então a
+incluir o abastecimento de populações - e não mais de indivíduos ou famílias - tanto para atender as necessidades fisiológicas das pessoas, preparar alimentos e promover a limpeza, quanto para manter a agricultura, irrigando as culturas, \citeonline{heller2006}.
 
-\cite{rocha2009}
+De acordo com \citeonline{rocha2009} o primeiro sistema de distribuição de água surgiu há cerca de 4.500 anos, mas a humanidade aprendeu a armazena-la para benefício próprio muito antes. Potes de barro não-cozidos foram fabricados por volta de 9000 a.C, e a cerâmica, em 7000 a.C., passando a ser fundamental para o incremento da capacidade de armazenamento de água. A irrigação começa a ser utilizada em 5000 a.C., na Mesopotâmia e no Egito,juntamente com os canais de drenagem, os quais recuperaram áreas pantanosas do delta do Nilo e dos rios Tigre e Eufrates. A primeira represa para armazenar água foi construída no Egito, em 2900 a.C., pelo faraó Menes, para abastecer a capital, Memphis, e a primeira represa de pedra foi erguida pelos assírios em 1300 a.C. O primeiro aqueduto conhecido foi criado em 700 a.C. por Ezequiel, rei de Judá, para abastecer jerusalém. Em 691 a.C., Senaqueribe, da Assíria, construiu um canal de 80 km e um aqueduto de 330 metros.
 
-\citeonline{tsutiya2006}
+Há cerca de 4 mil anos foi construído pelos hindus o primeiro sistema eficiente de distribuição de água em Mohenjo-Daro, no vale do Indo, na Índia. Na época, Mohenjo-Daro devia ter cerca de 40 mil habitantes e um perfeito sistema de poços e canais de lançamentos de efluentes. Grandes obras de saneamento foram desenvolvidas já nas antigas Grécia e Roma com elevado padrão de engenharia civil e hidráulica. Os imensos aquedutos romanos, construídos para transporte de água das fontes situadas nas montanhas até as cidades, utilizando a gravidade, são atualmente visitados por centenas de turistas. A população abastecia-se de água em fontes e utilizava latrinas, ambas públicas, \cite{rocha2009}. 
 
-\citeonline{neto1998}
+Vários registros de experiências de suprimento de água são encontrados, desde a antiguidade, demonstrando o progressivo desenvolvimento de tecnologias para a captação, o transporte, o tratamento e a distribuição de água. \citeonline[p. 35-38]{heller2006} apresentam uma extensa tabela com eventos relevantes na história do abastecimento de água, alguns destes citados nos parágrafos anteriores deste texto.
 
-\citeonline{nuvolari2003}
+O papel essencial da água para a sobrevivência humana e para o desenvolvimento das sociedades é de conhecimento geral na atualidade. Ao mesmo tempo, sabe-se que a sua disponibilidade na natureza tem sido insuficiente para atender a demanda requerida em muitas regiões do Planeta, fenômeno que vem se agravando crescentemente. Neste quadro as instalações para abastecimento de água devem ser capazes de fornecer água com qualidade, com regularidade e de forma acessível para as populações, além de respeitar os interesses dos outros usuários dos mananciais utilizados pensando na presente e nas futuras gerações. Assim, os profissionais encarregados de planejar, projetar, implantar, operar, manter e gerenciar as instalações de abastecimento de água devem sempre ter presente essa realidade e devem ter a capacidade de considera-la nas suas atividades, \citeonline{heller2006}.
 
-\citeonline{bragalli2012}
+A Idade Média (400 a 1400 d. C.) constituiu um período caracterizado por 10 séculos de estagnação ou mesmo de retrocesso cultural sob muitos aspectos, inclusive os sanitários. A poluição generalizada de rios mais ou menos caudalosos só se iniciou com a introdução de sistemas de efluentes domésticos nas cidades. Tais sistemas já existiam na antiga Babilônia, mas foi no Império Romano, desde o século VI a.C., que passaram a ter longo emprego. Os fossos dos castelos feudais recebiam toda espécie de imundícies, adquirindo características de verdadeiras cloacas. Detritos de todo tipo acumulavam-se nas ruas e imediações das cidades, facilitando a proliferação de ratos e criando sérios problemas de saúde pública - o mais grave foi a epidemia de peste bubônica, que só na Europa, causou cerca de 25 milhões de mortes, \cite{rocha2009}.
+
+A relação entre a veiculação de doenças por meio de sistemas de abastecimento de água foi, talvez, primeiramente reconhecida pelos trabalhos de \citeonline{snow1855}. Em 1854, um surto de cólera, em uma parte de Londres, causou muitas mortes em curto um período, e consequentemente muito pânico. Este surto matou cerca de 180 mil pessoas na Europa, nos anos 1846 a 1862, \cite{rocha2009}. O médico John Snow constatou que a doença era veiculada através do sistema de abastecimento de água da cidade de Londres, \cite{snow1999}. Por conta deste trabalho John Snow é mundialmente conhecido como o pai da epidemiologia \citeonline[p. 409]{calijuri2013}, \cite{susser1996}.
+
+Para regulamentar e dar diretrizes gerais sobre os sistemas de abastecimento de água, parte fundamental do saneamento básico, criaram-se leis. No Brasil a lei n$^{\circ}$ 11.445, de 5 de janeiro de 2007, também conhecida como lei do saneamento básico, traz como um dos seus princípios fundamentais a universalização do acesso, \cite{lei11445}. Ou seja, todos devem ter acesso ao saneamento básico. Esta lei define abastecimento de água potável como: constituído pelas atividades, infra-estruturas e instalações necessárias ao abastecimento público de água potável, desde a captação até as ligações prediais e respectivos instrumentos de medição.
+
+A portaria n$^{\circ}$  2914 de 12 de dezembro de 2011 do Ministério da Saúde, em seu artigo $5^{\circ}$ define em seu paragrafo VI sistema de abastecimento de água para consumo humano como: instalação composta por um conjunto de obras civis, materiais e equipamentos, desde a zona de captação até as ligações prediais,destinada à produção e ao fornecimento coletivo de água potável, por meio de rede de distribuição; e em seu paragrafo IX rede de distribuição como: parte do sistema de abastecimento formada por tubulações e seus acessórios, destinados a distribuir água potável até as ligações prediais, \cite{portaria2914}. 
+
+A situação atual do país em termos de saneamento básico é ainda bem debilitada, neste país 83,3 \% dos brasileiros tem abastecimento de água tratada. Ou seja, são mais de 35 milhões de brasileiros sem o acesso a este serviço básico. A região Sudeste apresenta 91,16\% de atendimento total de água; enquanto isso, o Norte apresenta índice de apenas 56,9\%.
+
+O custo para universalizar o acesso aos 4 serviços do saneamento (água, esgotos, resíduos e drenagem) é de R\$ 508 bilhões, no período de 2014 a 2033. Para universalização da água e dos esgotos esse custo será de R\$ 303 bilhões em 20 anos, \cite{tratabrasil2013}.
+
+A cada 100 litros de água coletados e tratados, em média, apenas 63 litros são consumidos. Ou seja 37\% da água no Brasil é perdida, seja com vazamentos, roubos e ligações clandestinas, falta de medição ou medições incorretas no consumo de água, resultando no prejuízo de R\$ 8 bilhões, \cite{tratabrasil2013}.
+
+Diante da importância de se ter um sistema de abastecimento de água já discutida aqui, tanto histórica, como atual, justifica-se o estudo de dimensionamento redes de distribuição de água, que são um fundamental constituinte deste sistema.
+
+A literatura internacional aborda o dimensionamento de redes de distribuição de água como um problema de otimização, \cite{lansey1989}, \cite{bragalli2006}, \cite{bragalli2012}. Para se resolver tal problema se utiliza programação não linear inteira mista.
 
 
-Pág 47
+% Da para usar uma parte da introdução
+%	http://repositorio.cbc.ufms.br:8080/jspui/bitstream/123456789/1524/1/Rita%20de%20C%C3%A1ssia%20do%20Prado%20Guido%20Gameiro.pdf
+
+%	http://tratabrasil.org.br/no-norte-e-no-nordeste-servico-irregular-de-agua-atinge-maioria-da-populacao
+%	http://www.civil.ita.br/graduacao/tgs/resumos/2005/TGIEI005_2005_Paulo.pdf
+%	http://www.sabesp.com.br/reducaopressao/
+
+
+\chapter{Objetivos}\label{objetivos}
+
+Este capítulo traz os objetivos gerais e específicos deste trabalho.
+
+\section{Objetivos gerais}
+
+Propor um modelo de programação matemática para o problema de dimensionar redes de distribuição e água
+considerando as restrições de projeto brasileiras, bem como um algoritmo para resolve-lo caso seja necessário. 
+Uma vez concluída a etapa de modelagem e resolução do problema, um sistema de apoio decisão será implementado de forma a disponibilizar esta solução para o publico em geral.
+
+\section{Objetivos específicos}
+Investigas quais algoritmos são apropriados para resolução do problema.
+
+
+\newpage
+
+\chapter{Revisão de Literatura}\label{revisao_de_literatura}
+
+
+Na literatura brasileira \citeonline{porto2006}, \citeonline{tsutiya2006}, \citeonline{neto1998}, \citeonline{nuvolari2003}, dentre outros, es redes de distribuição de água são classificadas me dois grandes tipos: redes ramificadas, e redes malhadas ou anelares.
+
+As redes ramificadas são redes em que a água ao sair de um ponto da rede não tem como voltar a este mesmo ponto, pois não existe caminho que possibilite isso. 
+
+As redes malhadas são redes em que a água pode voltar ao ponto de inicio de um percurso, existe um caminho que permite que a água faça esse caminho. 
+
+Na literatura citada, o dimensionamento dessas redes é ensinado de forma a ser possível que este seja realizado manualmente, ou com calculadores e planilhas eletrônicas. Para isso, o dimensionamento é ensinado de forma a se proceder de forma iterativa.
+
+
+%	Nomeclatura
+%	http://www.ufjf.br/engsanitariaeambiental/files/2012/09/HGT_Cap3__Aula-2_PARTE2.pdf
+
+
+\section{O dimensionamento de redes de água como uma problema de otimização combinatória}
+
+\citeonline{bragalli2012} apresenta o modelo estado da arte na modelagem do problema de dimensionar as redes de distribuição de água. Tal modelo será explanado nas subseções que se seguem, com minimas alterações de notação e com as unidades de medidas no SI para as grandezas físicas. Este modelo será o modelo base para se construir um modelo que se adeque aos critérios de dimensionamento da literatura brasileira.
+
+\subsection{Conjuntos do modelo}
+Os conjuntos do modelo são: \\
+\noindent
+$\setN$ = conjunto de nos. \\
+$\setE$ = conjunto de canos. \\
+$\setS$ = conjunto de fontes (reservatórios). \\
+$\delta_{+}$ = conjunto de canos saindo do nó $\mathrm{i}$ $\left( \mathrm{i} \in \mathbb{N} \right)$. \\
+$\delta_{-}$ = conjunto de canos entrando do nó $\mathrm{i}$ $\left( \mathrm{i} \in \mathbb{N} \right)$. \\
+
+O conjunto $\setN$ representa o conjunto de todas as conexões entre dois trechos, excetuando-se os pontos de junção dos reservatórios, pontos estes reunidos no conjunto $\setS$ deste modelo. O conjunto $\setE$ é o conjunto de todos os canos da rede de distribuição de água. Os conjuntos $\delta_{+}$, $\delta_{-}$ são conjuntos de pares de da forma (nó, cano). É importante observar que alguns nos da rede não pertencem a um dos conjuntos, mas pertencem ao outro, por exemplo no caso dos nos que são ponta de rede.
+
+\subsection{Parâmetros do modelo} 
+
+Os parâmetros do modelo são:\\
+\noindent
+$\ell \!\left( \edge \right)$ = comprimento do cano $\edge$ $\left( \edge \in \setE \right)$, em m. \\ 
+$\dmin \!\left( \edge \right)$ = diâmetro mínimo do cano $\edge$ $\left( \edge \in \setE \right)$, em m. \\
+$\dmax \!\left( \edge \right)$ = diâmetro máximo do cano $\edge$ $\left( \edge \in \setE \right)$, em m. \\
+$\dem\!\left( \inode \right)$ = demanda no nó $\inode$ $\left( \inode \in \setN \right)$, em $\mathrm{m^{3}/s}$. \\
+$\z\!\left( \inode \right)$ = cota do nó $\inode$ $\left( \inode \in \setN \cup \setS \right)$, em m. \\
+$\phmin\!\left( \inode \right)$ = pressão mínima no nó $\inode$ $\left( \inode \in \setN \right)$, em m. \\
+$\phmax\!\left( \inode \right)$ = pressão máxima no nó $\inode$ $\left( \inode \in \setN \right)$, em m. \\
+$\C\!\left( \edge \right)$ = constante da rugosidade dos canos, $\edge$ $\left( \edge \in \setE \right)$, adimensional.
+
+Para cada um dos trechos $\edge$, os diâmetros disponíveis pertencem a um conjunto discreto, designado aqui como $\mathrm{r_{e}}$. Para $ \edge \in \setE $: \\
+
+$\dmin := \DT\left( \edge, 1 \right) < \DT\left( \edge, 2 \right) < \cdots < \DT\left( \edge, \mathrm{r_{e}} \right) := \dmax$  \\
+
+Para cada cano $ \edge \in \setE $, existe uma função de custo, Para $ \mathrm{C_{e}}$, que normalmente aumenta rapidamente com o aumento do diâmetro.
+
+\subsection{Variáveis do modelo} 
+As variáveis do modelo são:\\
+
+\noindent
+$\vQ \!\left( \edge \right)$ = vazão no cano $\edge$ $\left(\forall \edge \in \setE \right)$, em $\mathrm{m^{3}/s}$. \\
+$\vD \!\left( \edge \right)$ = diâmetro do cano $\edge$ $\left(\forall \edge \in \setE \right)$, em m. \\
+$\vH \!\left( \inode \right)$ = pressão no nó $\inode$ $\left(\forall \inode \in \setN \right)$, em m. \\
+
+
+\subsection{Restrições do modelo}
+As restrições do modelo são: \\
+
+\noindent
+\begin{equation} \label{eq_diametro}
+	\dmin \leq \vD\!\left( \edge \right) \leq \dmax \left(\forall \edge \in \setE \right)
+\end{equation}
+
+A equação \ref{eq_diametro} obriga que para todos os trechos o diâmetro escolhido esteja entre o menor diâmetro comercial disponível e o maior diâmetro comercial disponível.
+
+\begin{equation} \label{eq_pressao}
+	\phmin + \z\!\left( \inode \right) \leq \vH\!\left( \inode \right) \leq \phmax + \z\!\left( \inode \right) \leq \!\left( \inode \right) \left(\forall \inode \in \setN \right)
+\end{equation}
+
+A equação \ref{eq_pressao} delimita que a pressão em todos os nos da rede seja maior ou igual a mínima e menor ou igual a máxima.
+
+\begin{equation} \label{eq_vazao}
+	-\dfrac{\pi}{4}v_{max}\vD^{2}\!\left( \edge \right) \leq \vQ\!\left( \edge \right) \leq \dfrac{\pi}{4}v_{max}\vD^{2}\!\left( \edge \right)\left(\forall \edge \in \setE \right)
+\end{equation}
+
+Neste modelo a forma de delimitar a vazão máxima de cada trecho é pela velocidade máxima admitida pra cada trecho, esta condição é descrita pela \ref{eq_vazao}.
+
+
+\subsection{Equações do modelo}
+
+A equação a seguir garante a conservação do fluxo em cada nó da rede:
+\begin{equation}\label{eq_fluxo}
+\sum_{\edge \in \setdn\!\left( \inode \right)} \!\!\!\vQ \! \left( \edge \right) - \sum_{\edge \in 	\setdp\!\left( \inode \right)} \!\!\! \vQ \!\left( \edge \right) =  \dem\!\left( \inode \right), \left(\forall \inode \in \setN \right)
+\end{equation}
+
+
+A perda de pressão entre cada dois nos que são extremidade de um trecho é definida por:
+\begin{equation}\label{eq_hz}
+\vH\!\left( \inode \right) - \vH\!\left( \jnode \right) = \dfrac{10.7 \ell \!\left( \edge \right)\vQ\!\left( \edge \right)^{1.852}}{\C\!\left( \edge \right)^{1.852}\vD\!\left( \edge \right)^{4.87}}, \left(\forall \edge = (\inode, \jnode) \in \setE \right)
+\end{equation}
+
+A equação \ref{eq_hz} é a equação de Hazen Williams, equação esta comumente utilizada para determinar a perda de carga entre dois pontos.
+
+A função objetivo do modelo é definida como:
+\begin{equation}\label{eq_objetivo}
+	\mathrm{minimize} \sum_{\edge}  \mathrm{C_{e}}\!\left(\vD\!\left( \edge \right)\right)\ell\!\left( \edge \right), \left(\edge \in \setE \right)
+\end{equation}
+
+O modelo apresentado difere do modelo comumente apresentado na literatura brasileira, \citeonline{porto2006}, \citeonline{tsutiya2006}, \citeonline{neto1998}, \citeonline{nuvolari2003}. 
+A principal diferença é que o critério para delimitar o diâmetro de um trecho se utiliza a vazão máxima, a literatura brasileira usa tabelas empíricas que trazem a velocidade do escoamento, o diâmetro, e a vazão máxima admitida, enquanto que o modelo usa a velocidade máxima.
+
+
+\chapter{Metodologia}
+ 
+	De forma a facilitar a realização deste trabalho, optou-se que o mesmo seja organizado em etapas, as quais são apresentadas a seguir. Tais etapas são também apresentadas no Cronograma de Trabalho apresentado ao fim deste capítulo. 
+
+\section{Etapas}
+	 As etapas pensadas para esta trabalho foram divididas em 7 partes como se segue.
+	 
+\subsection{Etapa 1} 
+	Revisão de literatura. Esta etapa será de grande importância para o trabalho. Tal etapa deve se estender por quase todo o trabalho.
+ 
+\subsection{Etapa 2}	
+	Formulação do problema de dimensionamento de redes de água como uma problema de otimização combinatória.
+ 
+\subsection{Etapa 3}
+	Escolha da ferramenta ou algoritmo a ser utilizado para a resolução do problema formulado, bem como sua avaliação.
+ 
+\subsection{Etapa 4}
+	Etapa de validação: modelo, solvers. Juntamente com os experimentos computacionais serão validados tanto o modelo, como qual solver se mostra apropriado para a resolução do modelo proposto.
+ 
+\subsection{Etapa 5}
+ 	Experimentos computacionais. Nesta etapa se planeja que sejam feitos experimentos computacionais para que se possa gerar resultados provenientes do modelo.
+ 
+\subsection{Etapa 6}
+	Análise dos resultados. Etapa árdua, pois é necessário que se faça verificações minuciosas dos valores obtidos com os experimentos do modelo. Caso os valores não sejam satisfatórios se deve retornar a etapa 2 e verificar se o modelo esta bem formulado, e assim para as demais etapas até a presente etapa.
+ 
+\subsection{Etapa 7}
+	Um vez passadas todas as etapas anteriores pretende-se desenvolvimento de um sistema de informação para o dimensionamento com base no método proposto. Ou seja, disponibilizar uma ferramenta pronta para ser utilizada contendo o modelo proposto.
+
+\section{Etapas organizadas em tabela}
+
+Organizando as etapas pensadas para a realização deste trabalho tem-se a tabela \label{cronograma}.
+
+\begin{table}[htb]
+	\caption{Cronograma}
+	\label{cronograma}
+	\center
+	\includegraphics[clip, trim=1.3cm 22.5cm 5.4cm 2cm]{tudo/cronograma.pdf}
+\end{table}
+
+
+
+\chapter{Resultados parciais e esperados}
+
+Neste capítulo serão apresentados os resultados parciais e esperados para o trabalho.
+
+\section{Resultados parciais}
+
+O modelo apresentado no \autoref{revisao_de_literatura}, apresentado por \cite{bragalli2012}, já se encontra adaptado a forma como a literatura brasileira, \citeonline{porto2006}, \citeonline{tsutiya2006}, \citeonline{neto1998}, \citeonline{nuvolari2003}, realiza o dimensionamento das redes de distribuição de água.
+
+Testes iniciais com dados artificiais foram realizados e se mostraram promissores. Os valores obtidos com os testes do modelo foram iguais aos valores obtidos com algoritmos desenvolvidos em planilhas eletrônicas.
+
+
+\section{Resultados esperados}
+
+Obter um modelo testado, e confiável para dimensionar de forma otimizada redes de distribuição de água.
+Melhorar o entendimento de como são dimensionadas as redes de distribuição de água, a formulação do dimensionamento como um problema de otimização combinatória tem esta virtude.
+Espera-se disponibilizar uma ferramenta computacional para dar acessibilidade ao modelo proposto, e desta forma, facilitar que o publico em geral possa utilizar o modelo proposto no trabalho.
+
+
+
+
+\citeonline{cormen2012} \citeonline{caliman2002}
+
+
+
+%\citeonline{heller2006}
+% https://books.google.com.br/books?hl=pt-BR&lr=&id=XFnnhzqetCoC&oi=fnd&pg=PA29&dq=hist%C3%B3ria+do+abastecimento+de+%C3%A1gua&ots=Hw9uoab_dk&sig=S7qD87qlSxLWDsOLYlMJbCTl4W4#v=onepage&q=hist%C3%B3ria%20do%20abastecimento%20de%20%C3%A1gua&f=false
+
+
+% http://www.scielosp.org/pdf/rpsp/v25n6/v25n6a12.pdf
+
+%\citeonline{tratabrasil}
+% http://www.tratabrasil.org.br/por-que-a-universalizacao-do-saneamento-basico-e-uma-meta-tao-dificil-de-ser-atingida-no-brasil-pensar-brasil
+
+%Pág 47
 
 %	https://books.google.com.br/books?id=2kD9QBk16q4C&pg=PA43&lpg=PA43&dq=o+primeiro+sistema+de+aqueduto+na+Ass%C3%ADria+em+691+A.C&source=bl&ots=pLk1mUbHwd&sig=cQjH9R8x4765hEHgCm70w_2hHoo&hl=pt-BR&sa=X&ved=0ahUKEwjRx7X9wo7UAhXIhpAKHfBGAK0Q6AEINzAD#v=onepage&q=o%20primeiro%20sistema%20de%20aqueduto%20na%20Ass%C3%ADria%20em%20691%20A.C&f=false
 
 %	http://www.tratabrasil.org.br/perdas-de-agua-desafios-ao-avanco-do-saneamento-basico-e-a-escassez-hidrica-2
 
-%	https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&cad=rja&uact=8&ved=0ahUKEwjgjMnYw47UAhUGGpAKHWUyCyoQFghJMAY&url=http%3A%2F%2Flegis.senado.leg.br%2Fsdleg-getter%2Fdocumento%2Fdownload%2F520a55e9-64c9-43b1-a6c6-96d41a6f2acd&usg=AFQjCNERIrYDj1vwRAooHnOG4aZvFhTxCg&sig2=Mg8QOBMvNIpPr_E7DAflXw
 
 %	http://www.brasil247.com/pt/247/amazonas247/174846/%C3%8Dndice-de-perda-de-%C3%A1gua-chega-a-755-em-Manaus.htm
 
@@ -509,44 +765,59 @@ Pág 47
 
 %	https://scholar.google.com.br/scholar?hl=pt-BR&q=BAPTISTA%2C+M%C3%A1rcio+Benedito.+Hidr%C3%A1ulica+aplicada&btnG=&lr=#
 
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
-gênero) produzido conforme a ABNT NBR 14724:2011 \emph{Informação e documentação
-- Trabalhos acadêmicos - Apresentação}.
 
 
-A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+% Extras
+% https://www.researchgate.net/profile/Harry_Schulz/publication/282813994_SIMULACAO_NUMERICA_DE_ESCOAMENTOS_SOBRE_AERADORES_FORMADOS_POR_ESCADA_E_CASCATA/links/561db25d08aef097132b2705.pdf
+% https://www.researchgate.net/profile/Harry_Schulz/publication/259398891_FENOMENOS_DE_TRANSPORTE_E_HIDRAULICA_EXEMPLOS_DE_METODOS_NUMERICOS_E_COMPUTACIONAIS_PARA_A_RESOLUCAO_DE_PROBLEMAS/links/54d578950cf2970e4e64f52a.pdf
 
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+% http://www.deha.ufc.br/ticiana/Arquivos/Especializacao/Cariri/6_Sistemas%20de%20Abast%20de%20%C1gua/Manual%20UFC2.pdf
 
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folha de aprovação, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} par mais informações.
 
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. 
 
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
 
-Equipe \abnTeX 
 
-Lauro César Araujo
+
+%%\newpage
+%%
+%%Este documento e seu código-fonte são exemplos de referência de uso da classe
+%%\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
+%%exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
+%%gênero) produzido conforme a ABNT NBR 14724:2011 \emph{Informação e documentação
+%%- Trabalhos acadêmicos - Apresentação}.
+%%
+%%
+%%A expressão ``Modelo Canônico'' é utilizada para indicar que \abnTeX\ não é
+%%modelo específico de nenhuma universidade ou instituição, mas que implementa tão
+%%somente os requisitos das normas da ABNT. Uma lista completa das normas
+%%observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+%%
+%%Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
+%%\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
+%%estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
+%%modificados tenham seus nomes alterados e que os créditos sejam dados aos
+%%autores originais, nos termos da ``The \LaTeX\ Project Public
+%%License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+%%
+%%Encorajamos que sejam realizadas customizações específicas deste exemplo para
+%%universidades e outras instituições --- como capas, folha de aprovação, etc.
+%%Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
+%%\abnTeX, distribua-se arquivos com as respectivas customizações.
+%%Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
+%%incompatíveis com as customizações promovidas. Consulte
+%%\citeonline{abntex2-wiki-como-customizar} par mais informações.
+%%
+%%Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
+%%\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
+%%\cite{memoir}. 
+%%
+%%Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
+%%você produzirá, de modo que o principal esforço seja concentrado no principal:
+%%na contribuição científica.
+%%
+%%Equipe \abnTeX 
+%%
+%%Lauro César Araujo
 
 % ----------------------------------------------------------
 % PARTE
@@ -555,19 +826,19 @@ Lauro César Araujo
 % ----------------------------------------------------------
 
 % ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
+% Capítulo com exemplos de comandos inseridos de arquivo externo 
 % ---
-\include{abntex2-modelo-include-comandos}
+%%\include{abntex2-modelo-include-comandos}
 % ---
 
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Referenciais teóricos}
+%%\part{Referenciais teóricos}
 % ----------------------------------------------------------
 
 % ---
-% Capitulo de revisão de literatura
+% Capítulo de revisão de literatura
 % ---
 %%\chapter{Lorem ipsum dolor sit amet}
 % ---
@@ -587,7 +858,7 @@ Lauro César Araujo
 % ----------------------------------------------------------
 
 % ---
-% primeiro capitulo de Resultados
+% primeiro capítulo de Resultados
 % ---
 %%\chapter{Lectus lobortis condimentum}
 % ---
@@ -600,7 +871,7 @@ Lauro César Araujo
 %%\lipsum[21-22]
 
 % ---
-% segundo capitulo de Resultados
+% segundo capítulo de Resultados
 % ---
 %%\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum elementum}
 % ---
@@ -713,3 +984,80 @@ Lauro César Araujo
 %---------------------------------------------------------------------
 
 \end{document}
+
+
+
+%Conjuntos do modelo \\
+%\noindent
+%$\setN$ = conjunto de nos. \\
+%$\setE$ = conjunto de canos. \\
+%$\setS$ = conjunto de fontes (reservatórios). \\
+%$\delta_{+}$ = conjunto de canos saindo do nó $\mathrm{i}$ $\left( \mathrm{i} \in \mathbb{N} \right)$. \\
+%$\delta_{-}$ = conjunto de canos entrando do nó $\mathrm{i}$ $\left( \mathrm{i} \in \mathbb{N} \right)$. \\
+%$\setT$ = conjunto das vazões máximas para um diâmetro. \\
+%
+%Parâmetros do modelo \\
+%\noindent
+%$\ell \!\left( \edge \right)$ = comprimento do cano $\edge$ $\left( \edge \in \setE \right)$, em m. \\ 
+%$\dmin \!\left( \edge \right)$ = diâmetro mínimo do cano $\edge$ $\left( \edge \in \setE \right)$, em m. \\
+%$\dmax \!\left( \edge \right)$ = diâmetro máximo do cano $\edge$ $\left( \edge \in \setE \right)$, em m. \\
+%$\dem\!\left( \inode \right)$ = demanda no nó $\inode$ $\left( \inode \in \setN \right)$, em $\mathrm{m^{3}/s}$. \\
+%$\z\!\left( \inode \right)$ = cota do nó $\inode$ $\left( \inode \in \setN \cup \setS \right)$, em m. \\
+%$\phmin\!\left( \inode \right)$ = pressão mínima no nó $\inode$ $\left( \inode \in \setN \right)$, em m. \\
+%$\dmin := \DT\left( \edge, 1 \right) < \DT\left( \edge, 2 \right) < \cdots < \DT\left( \edge, \mathrm{r_{e}} \right) := \dmax$  \\
+%$\C$ = constante da rugosidade dos canos, adimensional. \\
+%$\q$ = taxa de contribuição linear $\mathrm{m^{3}/(Km \cdot s)}$. \\
+%
+%
+%Variáveis do modelo \\
+%\noindent
+%$\vQ \!\left( \edge \right)$ = vazão no cano $\edge$ $\left(\forall \edge \in \setE \right)$, em $\mathrm{m^{3}/s}$. \\
+%$\vQF \!\left( \edge \right)$ = vazão média no cano $\edge$ $\left(\forall \edge \in \setE \right)$, em $\mathrm{m^{3}/s}$. \\
+%$\vD \!\left( \edge \right)$ = diâmetro do cano $\edge$ $\left(\forall \edge \in \setE \right)$, em m. \\
+%$\vH \!\left( \inode \right)$ = pressão no nó $\inode$ $\left(\forall \inode \in \setN \right)$, em m. \\
+%
+%
+%Restrições do modelo \\
+%\noindent
+%\begin{equation} 
+%	\dmin \leq \vD\!\left( \edge \right) \leq \dmax \left(\forall \edge \in \setE \right)
+%\end{equation}
+%
+%\begin{equation} 
+%	\phmin + \z\!\left( \inode \right) \leq \vH \!\left( \inode \right) \left(\forall \inode \in \setN \right)
+%\end{equation}
+%
+%
+%\begin{equation} 
+%	\phmin + \z\!\left( \inode' \right) = \vH \!\left( \inode' \right) \left(\exists! \ \inode' \in \setN \right)
+%\end{equation}
+%
+%\begin{equation} 
+%	\vQ\!\left( \edge \right)\leq \tilde{\mathrm{Q}}\!\left( \tT \right) \left( \forall \edge \in \setE , \ \exists \ \tT \in \setT \right)
+%\end{equation}
+%
+%\begin{equation} 
+%	\vQT\!\left( \edge \right) = \q\ell\!\left( \edge \right) \left(\forall \edge \in \setE \right)
+%\end{equation}
+%	
+%\begin{equation} 
+%	\vQF\!\left( \edge \right) = \dfrac{2\vQ\!\left( \edge \right) - \vQT\!\left( \edge \right)}{2} \left(\forall \edge \in \setE \right)
+%\end{equation}
+%
+%
+%Fluxo
+%\begin{equation}
+%\sum_{\edge \in \setdn\!\left( \inode \right)} \!\!\!\vQ \! \left( \edge \right) - \sum_{\edge \in 	\setdp\!\left( \inode \right)} \!\!\! \vQ \!\left( \edge \right) =  \dem\!\left( \inode \right), \left(\forall \inode \in \setN \right)
+%\end{equation}
+%
+%
+%Perda de pressão
+%\begin{equation}
+%\vH\!\left( \inode \right) - \vH\!\left( \jnode \right) = \dfrac{10.7 \ell \!\left( \edge \right)\vQF\!\left( \edge \right)^{1.852}}{\C\!\left( \edge \right)^{1.852}\vD\!\left( \edge \right)^{4.87}}, \left(\forall \edge = (\inode, \jnode) \in \setE \right)
+%\end{equation}
+%
+%Objetivo
+%\begin{equation}
+%	\mathrm{minimize} \sum_{\edge} \vD\!\left( \edge \right), \left(\edge \in \setE \right)
+%\end{equation}
+
